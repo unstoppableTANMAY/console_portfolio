@@ -21,7 +21,7 @@ const updatevalue = () => {
         checkcode(textarea.innerText.toLowerCase().trim());
         prevcmd = textarea.innerText.toLowerCase().trim();
     }
-    if(!!commands.find((item) =>item==textarea.innerText))textarea.classList.add("colored");else textarea.classList.remove("colored");
+    if(!!commands.find((item) =>item==textarea.innerText.toLowerCase().trim()))textarea.classList.add("colored");else textarea.classList.remove("colored");
     textareasize++;
     }
 
