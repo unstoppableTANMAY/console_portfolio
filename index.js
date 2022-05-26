@@ -17,11 +17,9 @@ function sleep(ms) {
 const commands = ["help","ls","cls","vim","cd","cd home","cd about","cd projects","cd contacts","vim readme.txt","tanmay","portfolio","switch","github","instagram","twitter","facebook"]
 
 const updatevalue = () => {
-//     console.log(textarea.innerText);
-//     console.log(textarea.innerHTML.includes("<br>"))
     if(textarea.innerHTML.includes("<br>")){
-        checkcode(textarea.innerHTML.trim());
-        prevcmd = textarea.innerText;
+        checkcode(textarea.innerText.trim());
+        prevcmd = textarea.innerText.trim();
     }
     if(!!commands.find((item) =>item==textarea.innerText))textarea.classList.add("colored");else textarea.classList.remove("colored");
     textareasize++;
@@ -148,7 +146,7 @@ Portfolio           it is my personal portfoli designed and created
     else if(code==="help"){
         static.innerText = temp + prevcmd;
         static.innerText += `
-                            Help
+                            Helpx
 
         "ls" ~ for all tabs
         "cls" ~ for clear console
