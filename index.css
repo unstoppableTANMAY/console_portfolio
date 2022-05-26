@@ -97,4 +97,7 @@ html,body{
     body,html{
         font-size: 7px;
     }
+    .textarea{
+        margin-left: 3rem;
+    }
 }
