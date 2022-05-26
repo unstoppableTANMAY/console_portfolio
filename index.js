@@ -17,8 +17,8 @@ function sleep(ms) {
 const commands = ["help","ls","cls","vim","cd","cd home","cd about","cd projects","cd contacts","vim readme.txt","tanmay","portfolio","switch","github","instagram","twitter","facebook"]
 
 const updatevalue = () => {
-    console.log(textarea.innerText);
-    console.log(textarea.innerHTML.includes("<br>"))
+//     console.log(textarea.innerText);
+//     console.log(textarea.innerHTML.includes("<br>"))
     if(textarea.innerHTML.includes("<br>")){
         checkcode(textarea.innerText.trim());
         prevcmd = textarea.innerText;
@@ -148,7 +148,7 @@ Portfolio           it is my personal portfoli designed and created
     else if(code==="help"){
         static.innerText = temp + prevcmd;
         static.innerText += `
-                            Helpx
+                            Help
 
         "ls" ~ for all tabs
         "cls" ~ for clear console
