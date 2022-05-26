@@ -29,7 +29,7 @@ textarea.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         checkcode(textarea.innerText.toLowerCase().trim());
-        prevcmd = textarea.innerText.toLowerCase().trim();
+        prevcmd = textarea.innerText.toLowerCase();
     }
     if (event.key === "ArrowUp") {
         event.preventDefault();
@@ -57,7 +57,7 @@ async function checkcode(code){
               |@@@@@|   /@@@/         +91 7008651763
               |@@@@@| /@@@/           tanmaypanda752@gmail.com
               |@@@@@|@@@/             
-              |@@@@@|@/               web developer
+              |@@@@@|@/               github linkedin instagram twiter
               |@@@@@|
               |@@@@@|\n`;
         static.innerText += '\n' + startcode;
@@ -106,19 +106,19 @@ async function checkcode(code){
     else if(code==="cd projects"){
         static.innerText = temp + prevcmd;
         static.innerText += `
-                         Projects
+                            Projects
 
-Covid Data      it is a web site to view all data about covid
-                in every state districts with all details like
-                confirmed total and vaccinated.
+Covid Data          it is a web site to view all data about covid
+                    in every state districts with all details like
+                    confirmed total and vaccinated.
 
-                link - https://github.unstoppableTANMAY/coviddata
+                    link - https://github.unstoppableTANMAY/coviddata
 
-Portfolio       it is my personal portfoli designed and created
-                by me for my personal purposes it has all details
-                about me and my carrier.
+Portfolio           it is my personal portfoli designed and created
+                    by me for my personal purposes it has all details
+                    about me and my carrier.
 
-                link - https://github.unstoppableTANMAY/portfolio
+                    link - https://github.unstoppableTANMAY/portfolio
 
 `;
         static.innerText += '\n' + startcode;
