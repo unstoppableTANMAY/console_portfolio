@@ -17,14 +17,20 @@ function sleep(ms) {
 const commands = ["help","ls","cls","vim","cd","cd home","cd about","cd projects","cd contacts","vim readme.txt","tanmay","portfolio","switch","github","instagram","twitter","facebook"]
 
 const updatevalue = () => {
+    console.log(textarea.innerText);
+    console.log(textarea.innerHTML.includes("<br>"))
+    if(textarea.innerHTML.includes("<br>")){
+        checkcode(textarea.innerText.trim());
+        prevcmd = textarea.innerText;
+    }
     if(!!commands.find((item) =>item==textarea.innerText))textarea.classList.add("colored");else textarea.classList.remove("colored");
     textareasize++;
-}
+    }
 
 textarea.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        checkcode(textarea.innerText);
+        checkcode(textarea.innerText.trim());
         prevcmd = textarea.innerText;
     }
     if (event.key === "ArrowUp") {
@@ -40,12 +46,12 @@ async function checkcode(code){
         static.innerText = startcode;
     }
     else if(code==="ls"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `\n\thome\n\tabout\n\tprojects\t(open folders with "cd foldername")\n\tcontacts\t(open files with "vim filename")\n\treadme.txt\n`
         static.innerText += '\n' + startcode;
     }
     else if(code==="tanmay"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `\n
         |@@@@@@//@@@@@@@@//@@|
         |@@@@@//@@@@@@@@//@@@|        Tanmay Kumar Panda
@@ -59,7 +65,7 @@ async function checkcode(code){
         static.innerText += '\n' + startcode;
     }
     else if(code==="cd home"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
                                   Home
                    -@                
@@ -81,7 +87,7 @@ async function checkcode(code){
         static.innerText += '\n' + startcode;
     }
     else if(code==="cd about"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
                                 About
 
@@ -100,7 +106,7 @@ async function checkcode(code){
         static.innerText += '\n' + startcode;
     }
     else if(code==="cd projects"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
                             Projects
 
@@ -120,7 +126,7 @@ Portfolio           it is my personal portfoli designed and created
         static.innerText += '\n' + startcode;
     }
     else if(code==="cd contacts"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
                             Contacts
 
@@ -140,7 +146,7 @@ Portfolio           it is my personal portfoli designed and created
         static.innerText += '\n' + startcode;
     }
     else if(code==="help"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
                             Helpx
 
@@ -169,7 +175,7 @@ Portfolio           it is my personal portfoli designed and created
         static.innerText += "Downloaded" + '\n' + startcode;
     }
     else if(code==="vim readme.txt"){
-        static.innerText = temp + textarea.innerText;
+        static.innerText = temp + prevcmd;
         static.innerText += `
         ~ readme.txt
 
@@ -199,7 +205,7 @@ Portfolio           it is my personal portfoli designed and created
         window.open('https://github.com/unstoppableTANMAY/portfolio', '_self');
     }
     else{
-        static.innerHTML += `${textarea.innerText} is not a valid command...`;
+        static.innerHTML += `${prevcmd} is not a valid command...`;
         static.innerText += '\n' + startcode;
     }
     textarea.innerText = "";
