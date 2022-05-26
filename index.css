@@ -1,0 +1,99 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #fff;
+    font-size: 10px;
+}
+.root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.console{
+    width: 50rem;
+    height: 30rem;
+    border-radius: .8rem;
+    background: black;
+}
+.topbar{
+    width: 100%;
+    height: 2.3rem;
+    background: rgb(53, 53, 53);
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titel{
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+}
+.btns{
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+.minimize{
+    background: green;
+}
+.maximize{
+    background: yellowgreen;
+}
+.close{
+    background: rgb(255, 42, 0);
+}
+.main{
+    width: 98%;
+    height: 27.7rem;
+    padding-left: 1rem;
+    overflow-y: scroll;
+    font-size: 1rem;
+    color: #fff; 
+    scroll-behavior: auto;
+}
+.static{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.textarea{
+    min-width: 2;
+    min-height: 25rem;
+    font-size: 1.2rem;
+    outline: none;
+    margin-top: -2.9rem;
+    margin-left: 2rem;
+}
+.main::-webkit-scrollbar{
+    width: .8rem;
+    height: .8rem;
+}
+.main::-webkit-scrollbar-thumb {
+    background: rgb(182, 182, 182); 
+    border-radius: 10px;
+}
+.colored{
+    color: yellowgreen;
+}
+
+
+@media (max-width: 700px) {
+    body,html{
+        font-size: 8px;
+    }
+}
+@media (max-width: 450px) {
+    body,html{
+        font-size: 6px;
+    }
+}
