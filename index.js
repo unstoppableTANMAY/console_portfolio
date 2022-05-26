@@ -103,7 +103,7 @@ async function checkcode(code){
 
         Phone - +91 7008651763    Email - tanmaypanda752@gmail.com 
 
-        Pin - 756047              Nationality - Indian
+        Pin - 756047              Nationality - Indian 
 
         `;
         static.innerText += '\n' + startcode;
