@@ -14,6 +14,7 @@ const startcode = `╭╼ ${folder}~/hackerone/master
 const rotatewait = ['-','\\','|','/'];
 window.onload = function() {
     textarea.focus();
+    static.innerHTML = startcode;
   }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
