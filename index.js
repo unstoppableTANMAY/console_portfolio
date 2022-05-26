@@ -18,8 +18,8 @@ const commands = ["help","ls","cls","vim","cd","cd home","cd about","cd projects
 
 const updatevalue = () => {
     if(textarea.innerHTML.includes("<br>")){
-        checkcode(textarea.innerText.trim());
-        prevcmd = textarea.innerText.trim();
+        checkcode(textarea.innerText.toLowerCase().trim());
+        prevcmd = textarea.innerText.toLowerCase().trim();
     }
     if(!!commands.find((item) =>item==textarea.innerText))textarea.classList.add("colored");else textarea.classList.remove("colored");
     textareasize++;
@@ -28,8 +28,8 @@ const updatevalue = () => {
 textarea.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        checkcode(textarea.innerText.trim());
-        prevcmd = textarea.innerText;
+        checkcode(textarea.innerText.toLowerCase().trim());
+        prevcmd = textarea.innerText.toLowerCase().trim();
     }
     if (event.key === "ArrowUp") {
         event.preventDefault();
