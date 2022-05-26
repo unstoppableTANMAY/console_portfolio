@@ -4,7 +4,7 @@ html,body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: #fff;
-    font-size: 10px;
+    font-size: 13px;
 }
 .root{
     width: 100vw;
@@ -94,6 +94,6 @@ html,body{
 }
 @media (max-width: 450px) {
     body,html{
-        font-size: 6px;
+        font-size: 7px;
     }
 }
