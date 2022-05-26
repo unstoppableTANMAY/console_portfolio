@@ -5,8 +5,12 @@ const main = document.querySelector('.main');
 var textareasize = 30;
 var prevcmd = "help";
 
-const startcode = `╭╼ 🗁 ~/hackerone/master 
-╰─🢖 `;
+var folder = (window.innerWidth<450)?'📁':"🗁 ";
+var arrow = (window.innerWidth<450)?"›":"🢖";
+
+const startcode = `╭╼ ${folder}~/hackerone/master 
+╰─${arrow} `;
+
 const rotatewait = ['-','\\','|','/'];
 window.onload = function() {
     textarea.focus();
