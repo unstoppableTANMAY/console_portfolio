@@ -20,7 +20,7 @@ const updatevalue = () => {
 //     console.log(textarea.innerText);
 //     console.log(textarea.innerHTML.includes("<br>"))
     if(textarea.innerHTML.includes("<br>")){
-        checkcode(textarea.innerText.trim());
+        checkcode(textarea.innerHTML.trim());
         prevcmd = textarea.innerText;
     }
     if(!!commands.find((item) =>item==textarea.innerText))textarea.classList.add("colored");else textarea.classList.remove("colored");
