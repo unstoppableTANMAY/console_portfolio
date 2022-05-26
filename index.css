@@ -61,7 +61,7 @@ html,body{
     overflow-y: scroll;
     font-size: 1rem;
     color: #fff; 
-    scroll-behavior: auto;
+    scroll-behavior: smoooth;
 }
 .static{
     font-size: 1.2rem;
