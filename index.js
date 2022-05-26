@@ -206,7 +206,7 @@ Portfolio           it is my personal portfoli designed and created
         window.open('https://github.com/unstoppableTANMAY/portfolio', '_self');
     }
     else{
-        static.innerHTML += `${prevcmd} is not a valid command...`;
+        static.innerHTML += `"${prevcmd}" is not a valid command...`;
         static.innerText += '\n' + startcode;
     }
     textarea.innerText = "";
