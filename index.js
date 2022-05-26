@@ -4,13 +4,11 @@ const main = document.querySelector('.main');
 
 var textareasize = 30;
 var prevcmd = "help";
-
 var folder = (window.innerWidth<450)?'📁':"🗁 ";
 var arrow = (window.innerWidth<450)?"›":"🢖";
 
 const startcode = `╭╼ ${folder}~/hackerone/master 
 ╰─${arrow} `;
-
 const rotatewait = ['-','\\','|','/'];
 window.onload = function() {
     textarea.focus();
@@ -103,7 +101,7 @@ async function checkcode(code){
 
         Phone - +91 7008651763    Email - tanmaypanda752@gmail.com 
 
-        Pin - 756047              Nationality - Indian 
+        Pin - 756047              Nationality - Indian
 
         `;
         static.innerText += '\n' + startcode;
